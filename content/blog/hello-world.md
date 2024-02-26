@@ -2,8 +2,8 @@
 title: "Hello, World!"
 description: "TLDR: 30 member tech team formed over seven years built India's largest stock broker. Unconventional setup. The long pending tech blog is finally here. Some backstory and context."
 date: "2020-04-06T00:00:00+05:30"
-author: knadh
-authors: ["knadh"]
+author: Shameem
+authors: ["Shameem"]
 tags: ["philosophy", "dev-culture", "tech-team"]
 image: "/static/images/product-mashup-2020-04.png"
 ---
