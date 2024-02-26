@@ -15,22 +15,20 @@ Java
 JavaScript
 Dart
 Databases PostgreSQL
-ClickHouse
 Redis
-SSDB
-ScyllaDB
 DuckDB
 MySQL
 Webervers and proxies Nginx
 HAProxy
 Kong
-Streams &amp;amp; Queues NATS
-Kafka
-Redpanda Console UI
-Benthos
-Observability &amp;amp; Monitoring Vector
-Grafana
-VictoriaMetrics
+Streams &amp;amp; Queues Kafka
+Observability &amp;amp; Monitoring Grafana
 Alertmanager
 Sentry
-DevOps &amp;amp; CI/CD Rundeck</description></item></channel></rss>
+DevOps &amp;amp; CI/CD Fastlane
+Gitlab Runner
+Web &amp;amp; Mobile frameworks VueJS
+Django
+Frappe
+Flask
+Flutter</description></item></channel></rss>
