@@ -23,20 +23,9 @@
   url: https://www.postgresql.org/
 
 - category: Databases
-  name: ClickHouse
-  url: https://clickhouse.com
-
-- category: Databases
   name: Redis
   url: https://redis.io/
-
-- category: Databases
-  name: SSDB
-  url: https://github.com/ideawu/ssdb
-
-- category: Databases
-  name: ScyllaDB
-  url: https://www.scylladb.com/
+  
 
 - category: Databases
   name: DuckDB
@@ -59,32 +48,12 @@
   url: https://konghq.com/
 
 - category: Streams & Queues
-  name: NATS
-  url: https://nats.io/
-
-- category: Streams & Queues
   name: Kafka
   url: https://kafka.apache.org/
-
-- category: Streams & Queues
-  name: Redpanda Console UI
-  url: https://github.com/redpanda-data/console
-
-- category: Streams & Queues
-  name: Benthos
-  url: https://www.benthos.dev/
-
-- category: Observability & Monitoring
-  name: Vector
-  url: https://vector.dev/
 
 - category: Observability & Monitoring
   name: Grafana
   url: https://grafana.com/
-
-- category: Observability & Monitoring
-  name: VictoriaMetrics
-  url: https://victoriametrics.com/
 
 - category: Observability & Monitoring
   name: Alertmanager
@@ -94,29 +63,6 @@
   name: Sentry
   url: https://sentry.io/
 
-- category: DevOps & CI/CD
-  name: Rundeck
-  url: https://www.rundeck.com/
-
-- category: DevOps & CI/CD
-  name: GitLab
-  url: https://www.gitlab.com/
-
-- category: DevOps & CI/CD
-  name: Airflow
-  url: https://airflow.apache.org/
-
-- category: DevOps & CI/CD
-  name: Salt Stack
-  url: https://www.saltstack.com/
-
-- category: DevOps & CI/CD
-  name: GLPI
-  url: https://glpi-project.org/
-
-- category: DevOps & CI/CD
-  name: Nomad
-  url: https://www.nomadproject.io/
 
 - category: DevOps & CI/CD
   name: Fastlane
