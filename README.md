@@ -1,3 +1,3 @@
-# zerodha.tech
+# yougotagift.tech
 
 Static website + blog.

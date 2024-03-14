@@ -4,7 +4,7 @@
     {{ $author := . }} <!-- Assign the current author to a variable -->
     {{ with index $.Site.Data.authors $author }} <!-- Access author details from the data directory -->
     <div class="author-individual">
-        <span class="avatar"><img src="{{ .avatar }}" alt="{{ .name }}" /></span>
+        <span class="avatar"><img src="{{ .Site.BaseURL }}/static/images/author.png" alt="{{ .name }}" /></span>
         <div class="meta">
             <div class="author-details">
                 <a href="{{ $.Site.BaseURL }}/authors/{{ $author }}" class="name">{{ .name }}</a>
