@@ -27,58 +27,17 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="{{ .Permalink }}" />
 
-	<link rel="shortcut icon" href="{{ .Site.BaseURL }}/static/images/favicon.png" />
+	<link rel="shortcut icon" href="{{ .Site.BaseURL }}/static/images/favicon.ico" />
 
 	{{ with .OutputFormats.Get "rss" -}}
 	{{ printf `
 	<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 	{{ end -}}
 
-	{{ with .Params.image }}
-	<meta property="og:image" content="{{ if in . " http" }}{{ . }}{{ else }}{{ $.Site.BaseURL }}{{ . }}{{ end }}" />
-	{{ else }}
-	<meta property="og:image" content="https://zerodha.com/static/images/landing.png">
-	{{ end }}
 
-	<script>
-		var _paq = window._paq = window._paq || [];
-		/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-		_paq.push(['trackPageView']);
-		_paq.push(['enableLinkTracking']);
-		(function () {
-			var u = "//m.zerodha.com/";
-			_paq.push(['setTrackerUrl', u + 'js/']);
-			_paq.push(['setSiteId', '16']);
-			_paq.push(['setAPIUrl', u]);
-			var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-			g.async = true; g.src = u + 'js/'; s.parentNode.insertBefore(g, s);
-		})();
-	</script>
-
-	<script type="application/ld+json">
-		{
-			"@context" : "https://schema.org",
-			"@type" : "Organization",
-			"name" : "{{ $.Site.Title }}",
-			"logo": "https://zerodha.tech/static/images/logo.svg",
-			"description": {{ $.Site.Params.subtitle }},
-			"contactPoint" : [{
-				"@type" : "ContactPoint",
-				"telephone" : "+91 80 4040 2020",
-				"contactType" : "customer service"
-			}],
-			"url" : "https://zerodha.tech",
-			"sameAs" : [
-				"https://facebook.com/zerodha.social",
-				"https://twitter.com/zerodhaonline",
-				"https://youtube.com/user/zerodhaonline",
-				"https://linkedin.com/company/zerodha",
-				"https://instagram.com/zerodhaonline"
-			]
-		}
-	</script>
-
-	<link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ .Site.BaseURL }}/static/style.css" />
 
 	<!-- <link rel="stylesheet" type="text/css" media="(prefers-color-scheme: dark)" href="{{ .Site.BaseURL }}/static/dark.css" />	 -->
@@ -86,30 +45,32 @@
 
 <body>
 	{{ .Site.Params.paginate }}
-	<section class="page-hero">
-		<div class="container wrap">
-			<div class="header">
-				<div class="logo">
-					<a href="{{ .Site.BaseURL }}/"><img alt="Zerodha technology blog"
-							src="{{ .Site.BaseURL }}/static/images/logo.svg" /></a>
-				</div>
-				<nav class="nav">
-					{{ $cur := . }}
-					{{ range $.Site.Menus.header }}
-					{{ $active := in $cur.RelPermalink .URL }}
-					<a class="{{ if $active }} active {{ end }}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-					{{ end }}
+	<div class="header">
+		<div class="logo">
+			<a href="{{ .Site.BaseURL }}/"><img alt="YOUGotaGift technology blog"
+					src="{{ .Site.BaseURL }}/static/images/logo.png" width="318" height="107" /></a>
+		</div>
+		<nav class="nav">
+			{{ $cur := . }}
+			{{ range $.Site.Menus.header }}
+			{{ $active := in $cur.RelPermalink .URL }}
+			<a class="{{ if $active }} active {{ end }}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+			{{ end }}
 
-					<a href="{{ .Site.BaseURL }}/index.xml" class="feed" title="Subscribe to feed">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M4 11a9 9 0 0 1 9 9" />
-							<path d="M4 4a16 16 0 0 1 16 16" />
-							<circle cx="5" cy="19" r="1" />
-						</svg>
-					</a>
-				</nav>
-			</div>
+			<a href="{{ .Site.BaseURL }}/index.xml" class="feed" title="Subscribe to feed">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M4 11a9 9 0 0 1 9 9" />
+					<path d="M4 4a16 16 0 0 1 16 16" />
+					<circle cx="5" cy="19" r="1" />
+				</svg>
+			</a>
+		</nav>
+	</div>
+	<section class="page-hero"  style="background-image: url('{{ .Site.BaseURL }}/static/images/logo-u.svg'); ">
+		
+		<div class="container wrap">
+			
 
 			{{ if .IsPage }}
 			<div class="post single">
@@ -125,9 +86,7 @@
 				</div>
 			</div>
 			{{ else if .IsHome }}
-			<h1 class="intro">
-				We build <span class="bold">technology at
-					Zerodha, </span> <span class="highlight">India's largest stock broker</span>.
+			<h1 class="intro">We Build <span class="bold">Technology at YOUGotaGift,</span> <p class="highlight bold">Crafting the future of Digital Gift Cards in MENA.</p>
 			</h1>
 
 			{{ else if isset .Data "Term" }}
